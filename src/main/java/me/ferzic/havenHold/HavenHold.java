@@ -3,21 +3,32 @@ package me.ferzic.havenHold;
 import me.ferzic.havenHold.Listeners.WelcomeGoodbyeListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.logging.Logger;
+
 public final class HavenHold extends JavaPlugin {
+
+    private static HavenHold instance;
+    private static Logger logger;
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new WelcomeGoodbyeListener(), this);
-        getLogger().fine("HavenHold SMP Core has been enabled.");
+        instance = this;
+        logger = getLogger();
 
+        getServer().getPluginManager().registerEvents(new WelcomeGoodbyeListener(), this);
+        logger.info("HavenHold SMP Core has been enabled.");
     }
 
     @Override
     public void onDisable() {
-        getLogger().fine("HavenHold SMP Core has been disabled.");
+        logger.info("HavenHold SMP Core has been disabled.");
     }
 
+    public static HavenHold getInstance() {
+        return instance;
+    }
 
+    public static Logger getPluginLogger() {
+        return logger;
+    }
 }
-
-
