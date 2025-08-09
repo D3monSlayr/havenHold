@@ -1,2 +1,10 @@
-me\ferzic\havenHold\HavenHold.class
+me\ferzic\havenHold\Artifacts\ShadowstepBoots\ShadowstepBootsItem.class
+me\ferzic\havenHold\Artifacts\BladeOfDawn\BladeOfDawnItem.class
+me\ferzic\havenHold\Artifacts\HeartOfHaven\HeartOfHavenItem.class
+me\ferzic\havenHold\Artifacts\FrostbinderStaff\FrostbinderStaffItem.class
 me\ferzic\havenHold\Listeners\WelcomeGoodbyeListener.class
+me\ferzic\havenHold\Artifacts\StormcallerCrown\StormcallerCrownItem.class
+me\ferzic\havenHold\Commands\CoreCommand.class
+me\ferzic\havenHold\Artifacts\WardensBulwark\WardensBulwarkItem.class
+me\ferzic\havenHold\HavenHold.class
+me\ferzic\havenHold\Artifacts\EmberforgedGauntlet\EmberforgedGauntletItem.class

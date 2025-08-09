@@ -1,6 +1,15 @@
 name: HavenHold
-version: '1.0'
+version: '1.0-BETA'
 main: me.ferzic.havenHold.HavenHold
 api-version: '1.21'
-authors: [ Ferzic ]
+authors: [ Ferzic, Geoh ]
 description: The core plugin of Haven Hold Network.
+commands:
+  havenhold:
+    description: Main command for HavenHold.
+    usage: /<command> <param>
+    aliases: [hh, haven]
+permissions:
+  havenhold.use:
+    description: Allows use of HavenHold commands.
+    default: op

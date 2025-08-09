@@ -1,8 +1,10 @@
 package me.ferzic.havenHold;
 
+import me.ferzic.havenHold.Commands.CoreCommand;
 import me.ferzic.havenHold.Listeners.WelcomeGoodbyeListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public final class HavenHold extends JavaPlugin {
@@ -15,6 +17,7 @@ public final class HavenHold extends JavaPlugin {
         instance = this;
         logger = getLogger();
 
+        Objects.requireNonNull(getCommand("core")).setExecutor(new CoreCommand());
         getServer().getPluginManager().registerEvents(new WelcomeGoodbyeListener(), this);
         logger.info("HavenHold SMP Core has been enabled.");
     }
