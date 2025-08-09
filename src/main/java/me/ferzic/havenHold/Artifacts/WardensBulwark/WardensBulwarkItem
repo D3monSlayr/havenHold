@@ -13,7 +13,11 @@ import java.util.List;
   public WardensBulwarkItem()  {
 
 
-itemMeta.lore(List.of(
+ ItemMeta meta = this.getItemMeta();
+
+        if (meta != null) {
+        
+            itemMeta.lore(List.of(
     Component.text("§7Crafted from ancient stones"), 
     Component.text("§7imbued with protective magic."),
     Component.text("§7Few can withstand the storm"),
@@ -23,6 +27,14 @@ itemMeta.lore(List.of(
     Component.text("§6Blocks all projectiles for 5 seconds.")
 ));
 
+            ));
 
+            meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            meta.setUnbreakable(true);
+            this.setItemMeta(meta);
+        } else {
+            HavenHold.getPluginLogger().warning("[BladeOfDawnItem] Meta is null");
+        }
 
-  }
+    }
+}
