@@ -1,0 +1,30 @@
+package me.ferzic.havenHold.Artifacts.FrostbinderStaff;
+
+import net.kyori.adventure.text.Component;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ShadowstepBootsItem {
+
+  public ShadowstepbootsItem
+    super(Material.GOLDEN_BOOTS);
+
+     itemMeta.lore(List.of(
+    Component.text("§7Crafted from shadows woven"), 
+    Component.text("§7deep in the realm."),
+    Component.text("§7Few can master the step"),
+    Component.text("§7between worlds."),
+    Component.text(""),
+    Component.text("§6Right-click to teleport."),
+    Component.text("§6Moves you a short distance in"),
+    Component.text("§6the direction you're looking.")
+));
+
+
+
+}
+
