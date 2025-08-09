@@ -66,7 +66,7 @@ public class CoreCommand implements TabExecutor {
                 }
             }
             case "version" -> {
-                player.sendMessage("§aHavenHold SMP version: §f1.0-BETA");
+                player.sendMessage("§aHavenHold SMP version: §f1.0");
             }
             default -> player.sendMessage("§cUnknown subcommand. Use: /core <give|version>");
         }
