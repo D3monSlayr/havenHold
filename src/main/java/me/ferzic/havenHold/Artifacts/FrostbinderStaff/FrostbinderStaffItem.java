@@ -1,5 +1,6 @@
 package me.ferzic.havenHold.Artifacts.FrostbinderStaff;
 
+import me.ferzic.havenHold.HavenHold;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Material;
@@ -29,11 +30,9 @@ public class FrostbinderStaffItem extends ItemStack{
                     Component.text("§6enemies in a radius.")
             ));
 
-            meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-            meta.setUnbreakable(true);
             this.setItemMeta(meta);
         } else {
-            HavenHold.getPluginLogger().warning("[BladeOfDawnItem] Meta is null");
+            HavenHold.getPluginLogger().warning("[FrostbinderStaffItem] Meta is null");
         }
 
     }
