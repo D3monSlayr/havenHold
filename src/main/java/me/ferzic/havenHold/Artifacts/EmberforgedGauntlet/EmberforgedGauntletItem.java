@@ -14,9 +14,15 @@ public class EmberforgedGauntletItem extends ItemStack {
         super(Material.NETHERITE_HELMET);
 
         ItemMeta meta = this.getItemMeta();
-        meta.lore(
-                List.of(
-                        Component.text("")
+      itemMeta.lore(List.of(
+    Component.text("§7Forged in the chaos of HavenHold,"), 
+    Component.text("§7this gauntlet holds a fragment of"),
+    Component.text("§7an ancient fire spirit."),
+    Component.text(""),
+    Component.text("§6Right-click to launch a fireball."),
+    Component.text("§6Ignites targets on hit.")
+));
+
                         
                 )
         );
@@ -24,4 +30,5 @@ public class EmberforgedGauntletItem extends ItemStack {
     }
 
 }
+
 
