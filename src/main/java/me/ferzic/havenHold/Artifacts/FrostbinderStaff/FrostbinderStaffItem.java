@@ -29,7 +29,11 @@ public class FrostbinderStaffItem extends ItemStack{
                     Component.text("§6enemies in a radius.")
             ));
 
+            meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            meta.setUnbreakable(true);
             this.setItemMeta(meta);
+        } else {
+            HavenHold.getPluginLogger().warning("[BladeOfDawnItem] Meta is null");
         }
 
     }
