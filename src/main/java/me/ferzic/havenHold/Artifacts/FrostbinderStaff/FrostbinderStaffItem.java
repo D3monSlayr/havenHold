@@ -18,7 +18,7 @@ itemMeta.lore(List.of(
     Component.text("§7found deep beneath the world."),
     Component.text("§7Few can wield its flame without"),
     Component.text("§7being consumed."),
-    Component.text(""),
+    Component.newline(),
     Component.text("§6Right-click to release a frost pulse."),
     Component.text("§6Freezes water into ice and slows"),
     Component.text("§6enemies in a radius.")
