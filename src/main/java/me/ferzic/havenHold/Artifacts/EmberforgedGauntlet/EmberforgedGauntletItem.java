@@ -27,9 +27,14 @@ public class EmberforgedGauntletItem extends ItemStack {
                     Component.text("§6Ignites targets on hit.")
             ));
             
+             meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            meta.setUnbreakable(true);
             this.setItemMeta(meta);
+        } else {
+            HavenHold.getPluginLogger().warning("[BladeOfDawnItem] Meta is null");
         }
 
     }
 
 }
+
