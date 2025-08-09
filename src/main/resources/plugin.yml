@@ -1,0 +1,6 @@
+name: HavenHold
+version: '1.0'
+main: me.ferzic.havenHold.HavenHold
+api-version: '1.21'
+authors: [ Ferzic ]
+description: The core plugin of Haven Hold Network.
