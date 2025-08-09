@@ -1,5 +1,6 @@
 package me.ferzic.havenHold.Artifacts.EmberforgedGauntlet;
 
+import me.ferzic.havenHold.HavenHold;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -26,15 +27,16 @@ public class EmberforgedGauntletItem extends ItemStack {
                     Component.text("§6Right-click to launch a fireball."),
                     Component.text("§6Ignites targets on hit.")
             ));
-            
-             meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-            meta.setUnbreakable(true);
+
             this.setItemMeta(meta);
         } else {
-            HavenHold.getPluginLogger().warning("[BladeOfDawnItem] Meta is null");
+            HavenHold.getPluginLogger().warning("[EmberforgedGaunletItem] Meta is null");
         }
 
     }
 
 }
+
+
+
 
