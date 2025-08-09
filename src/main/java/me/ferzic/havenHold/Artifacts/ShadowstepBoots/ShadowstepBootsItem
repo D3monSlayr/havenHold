@@ -18,16 +18,16 @@ public class ShadowstepBootsItem {
         if (meta != null) {
         
             itemMeta.lore(List.of(
-    Component.text("§7Crafted from ancient stones"), 
-    Component.text("§7imbued with protective magic."),
-    Component.text("§7Few can withstand the storm"),
-    Component.text("§7of arrows and spells."),
+    Component.text("§7Crafted from shadows woven"), 
+    Component.text("§7deep in the realm."),
+    Component.text("§7Few can master the step"),
+    Component.text("§7between worlds."),
     Component.text(""),
-    Component.text("§6Right-click to create a barrier."),
-    Component.text("§6Blocks all projectiles for 5 seconds.")
+    Component.text("§6Right-click to teleport."),
+    Component.text("§6Moves you a short distance in"),
+    Component.text("§6the direction you're looking.")
 ));
 
-            ));
 
             meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             meta.setUnbreakable(true);
