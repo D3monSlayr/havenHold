@@ -3,7 +3,9 @@ package me.ferzic.havenHold.Commands;
 import me.ferzic.havenHold.Artifacts.BladeOfDawn.BladeOfDawnItem;
 import me.ferzic.havenHold.Artifacts.EmberforgedGauntlet.EmberforgedGauntletItem;
 import me.ferzic.havenHold.Artifacts.FrostbinderStaff.FrostbinderStaffItem;
+import me.ferzic.havenHold.Artifacts.HeartOfHaven.HeartOfHavenItem;
 import me.ferzic.havenHold.Artifacts.ShadowstepBoots.ShadowstepBootsItem;
+import me.ferzic.havenHold.Artifacts.StormcallerCrown.StormcallerCrownItem;
 import me.ferzic.havenHold.Artifacts.WardensBulwark.WardensBulwarkItem;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -44,7 +46,7 @@ public class CoreCommand implements TabExecutor {
                         player.getInventory().addItem(new BladeOfDawnItem());
                         player.sendMessage("§6You have received the Blade of Dawn!");
                     }
-                    case "emberforgedgaunlet" -> {
+                    case "emberforgedgauntlet" -> {
                         player.getInventory().addItem(new EmberforgedGauntletItem());
                         player.sendMessage("§6You have received the Ember Forged Gaunlet!");
                     }
@@ -59,6 +61,14 @@ public class CoreCommand implements TabExecutor {
                     case "wardensbulwark" -> {
                         player.getInventory().addItem(new WardensBulwarkItem());
                         player.sendMessage("§6You have received the Warden's Bulwark!");
+                    }
+                    case "stormcallercrown" -> {
+                        player.getInventory().addItem(new StormcallerCrownItem());
+                        player.sendMessage("§6You have received the Stormcaller's Crown!");
+                    }
+                    case "heartofhaven" -> {
+                        player.getInventory().addItem(new HeartOfHavenItem());
+                        player.sendMessage("§6You have received the Heart of Haven!");
                     }
                     default -> {
                         player.sendMessage("§cUnknown item: " + args[1]);
@@ -90,11 +100,13 @@ public class CoreCommand implements TabExecutor {
         } else if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
             // Suggest actual artifact item names
             List<String> items = List.of(
-                    "BladeOfDawn",
-                    "EmberforgedGauntlet",
-                    "FrostbinderStaff",
-                    "ShadowstepBoots",
-                    "WardensBulwark"
+                    "bladeofdawn",
+                    "emberforgedgauntlet",
+                    "frostbinderstaff",
+                    "shadowstepboots",
+                    "wardensbulwark",
+                    "stormcallercrown",
+                    "heartofhaven"
             );
             for (String item : items) {
                 if (item.toLowerCase().startsWith(args[1].toLowerCase())) {

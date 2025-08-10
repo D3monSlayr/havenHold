@@ -11,14 +11,14 @@ public class WelcomeGoodbyeListener implements Listener {
     @EventHandler
     public void PlayerJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        p.sendMessage(Component.text("§aWelcome to the SMP §b§l" + p.getName() + "!"));
         e.joinMessage(Component.text("§b§l" + p.getName() + " §bhas joined the SMP."));
+        p.sendMessage(Component.text("§aWelcome to the SMP §b§l" + p.getName() + "!"));
     }
 
     @EventHandler
     public void PlayerLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
-        p.sendMessage(Component.text("§aGoodbye §b§l" + p.getName() + " §4§l:("));
         e.quitMessage(Component.text("§4§l" + p.getName() + " §chas left the game."));
+        p.sendMessage(Component.text("§aGoodbye §b§l" + p.getName() + " §4§l:("));
     }
 }

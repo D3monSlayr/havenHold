@@ -4,6 +4,7 @@ import me.ferzic.havenHold.HavenHold;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Material;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -18,18 +19,20 @@ public class FrostbinderStaffItem extends ItemStack{
         ItemMeta meta = this.getItemMeta();
 
         if (meta != null) {
-            meta.displayName(Component.text("§x§0§A§F§F§F§F§lF§x§0§C§E§D§F§B§lr§x§0§D§D§A§F§8§lo§x§0§F§C§8§F§4§ls§x§1§1§B§6§F§0§lt§x§1§2§A§3§E§C§lb§x§1§4§9§1§E§9§li§x§1§6§7§F§E§5§ln§x§1§7§6§C§E§1§ld§x§1§9§5§A§D§D§le§x§1§B§4§8§D§A§lr§x§1§C§3§5§D§6§l'§x§1§E§2§3§D§2§ls §x§1§E§2§3§D§2§lS§x§1§E§2§3§D§2§lt§x§1§E§2§3§D§2§la§x§1§E§2§3§D§2§lf§x§1§E§2§3§D§2§lf"));
+            meta.displayName(Component.text("§b§lFrost Binder's Staff"));
             meta.lore(List.of(
                     Component.text("§7Forged from Ember, a rare mineral"),
                     Component.text("§7found deep beneath the world."),
                     Component.text("§7Few can wield its flame without"),
                     Component.text("§7being consumed."),
-                    Component.newline(),
+                    Component.text(""),
                     Component.text("§6Right-click to release a frost pulse."),
                     Component.text("§6Freezes water into ice and slows"),
                     Component.text("§6enemies in a radius.")
             ));
 
+            meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            meta.setUnbreakable(true);
             this.setItemMeta(meta);
         } else {
             HavenHold.getPluginLogger().warning("[FrostbinderStaffItem] Meta is null");

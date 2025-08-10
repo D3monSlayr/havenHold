@@ -5,10 +5,10 @@ api-version: '1.21'
 authors: [ Ferzic, Geoh ]
 description: The core plugin of Haven Hold Network.
 commands:
-  havenhold:
+  core:
     description: Main command for HavenHold.
     usage: /<command> <param>
-    aliases: [hh, haven]
+    aliases: [c, hh]
 permissions:
   havenhold.use:
     description: Allows use of HavenHold commands.
